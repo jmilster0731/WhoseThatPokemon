@@ -1,0 +1,151 @@
+.page-container {
+    margin: auto;
+    width: 80%;
+    padding: 10px;
+  }
+  
+  .game-title {
+    text-align: Center;
+    font-family: 'Pokemon Solid', sans-serif;
+    font-size: 50px;
+    letter-spacing: 6px;
+    color: yellow;
+    -webkit-text-stroke: 3px black;
+  }
+  
+  .game-header {
+    display: grid;
+    grid-template-columns: 9fr 1fr;
+    margin-bottom: 10px;
+  }
+  
+  .game-board-container {
+    display: grid;
+    max-width: 80%;
+    margin: auto;
+  }
+  
+  .game-title {
+    text-align: center;
+  }
+  
+  .game-board {
+    display: grid;
+    grid-template-columns: 2fr 8fr;
+    max-width: 100%;
+  }
+  
+  .pokemon-display {
+    display: grid;
+    width: 100%;
+    min-height: 200px;
+    grid-template-columns: 1fr;
+  }
+  
+  .answer-key-display {
+    display: grid;
+    width: auto;
+    min-height: 20px;
+    background: green;
+    border: 4px solid brown;
+    grid-template-columns: repeat(10, 1fr);
+  }
+  
+  .keyboard-container {
+    display: grid;
+    max-width: 80%;
+    margin: 20px auto 20px auto;
+  }
+  
+  .keyboard-row-one{
+    display: inline-grid;
+    grid-template-columns: repeat(10, 1fr);
+  }
+  
+  .keyboard-row-two{
+    display: inline-grid;
+    grid-template-columns: repeat(9, 1fr);
+  }
+  
+  .keyboard-row-three{
+    display: inline-grid;
+    grid-template-columns: repeat(7, 1fr);
+  }
+  
+  .key {
+      box-shadow:inset 0px 1px 0px 0px #8D918D;
+      background:linear-gradient(to bottom, #8D918D 5%, #53565A 100%);
+      background-color:#8D918D;
+      border-radius:6px;
+      border:1px solid #8D918D;
+      display:inline-block;
+      cursor:pointer;
+      color:#ffffff;
+      font-family:Arial;
+      font-size:15px;
+      font-weight:bold;
+      padding:6px 24px;
+      text-decoration:none;
+      text-shadow:0px 1px 0px #8D918D;
+    text-align: center;
+    margin: 1px;
+  }
+  
+  .key:hover {
+      background:linear-gradient(to bottom, #53565A 5%, #8D918D 100%);
+      background-color:#8D918D;
+  }
+  
+  .key:active {
+      position:relative;
+      top:1px;
+  }
+  
+  .answer-board {
+    margin: auto;
+    color: white;
+    font-size: 40px;
+  }
+  
+  body{
+    background: url("https://external-preview.redd.it/z7_wYb9-YSvt0pDJlDIu8iuK_aWdqZPg0wvrGdwNvBw.png?auto=webp&v=enabled&s=fe16be27b0b7fa91ac98ec7f0a0616f0b5eb9a50");
+    background-size: cover;
+  }
+  
+  .start-game-button {
+    border-radius: 50%;
+    background-size: 110%;
+    background-repeat: no-repeat;
+    border: solid 2px black;
+    background-image: url('https://i.imgur.com/COIRBg9.jpg');
+  }
+  
+  .extra-info {
+    display: grid;
+    grid-template-columns: 1fr 9fr;
+    width: 80%;
+    margin: auto;
+  }
+  
+  .tally {
+    display: inline-grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+  
+  tally-header {
+    width: 100%;
+    text-align: center;
+  }
+  
+  tally-counter {
+    width: 100%;
+    text-align: center;
+  }
+  
+  img {
+    width: 100%;
+  }
+  
+  
+  @import url('https://fonts.cdnfonts.com/css/pokemon-solid')
