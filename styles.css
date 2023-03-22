@@ -73,20 +73,20 @@
   }
   
   .key {
-      box-shadow:inset 0px 1px 0px 0px #8D918D;
-      background:linear-gradient(to bottom, #8D918D 5%, #53565A 100%);
-      background-color:#8D918D;
-      border-radius:6px;
-      border:1px solid #8D918D;
-      display:inline-block;
-      cursor:pointer;
-      color:#ffffff;
-      font-family:Arial;
-      font-size:15px;
-      font-weight:bold;
-      padding:6px 24px;
-      text-decoration:none;
-      text-shadow:0px 1px 0px #8D918D;
+    box-shadow:inset 0px 1px 0px 0px #8D918D;
+    background:linear-gradient(to bottom, #8D918D 5%, #53565A 100%);
+    background-color:#8D918D;
+    border-radius:6px;
+    border:1px solid #8D918D;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:6px 24px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #8D918D;
     text-align: center;
     margin: 1px;
   }
@@ -123,28 +123,56 @@
   .extra-info {
     display: grid;
     grid-template-columns: 1fr 9fr;
+    grid-gap: 10px;
     width: 80%;
     margin: auto;
   }
   
   .tally {
-    display: inline-grid;
+    display: grid;
     width: 100%;
+    height: 60px;
     grid-template-columns: 1fr;
-  }
-  
-  tally-header {
-    width: 100%;
+    background: green;
     text-align: center;
+    border: 3px solid brown;
   }
   
-  tally-counter {
+  .tally-header {
     width: 100%;
-    text-align: center;
+    color: white;
+    padding-top: 5px;
   }
   
-  img {
-    width: 100%;
+  .tally-counter {
+    width: 100%;    
+    color: white;
+    padding-top: 5px;
+  }
+  
+  .start-button{
+    width: 200px
+  }
+
+  .previous-input {
+    display: grid;
+    grid-template-columns: 2fr 8fr;
+    background: green;
+    border: 3px solid brown;
+  }
+
+  .previous-input-header {
+    padding-top: 20px;
+    padding-left: 15px;
+    color: white;
+    font-size-adjust: auto;
+  }
+
+  .previous-input-render {
+    padding-top: 20px;
+    padding-left: 15px;
+    color: white;
+    font-size-adjust: auto;
   }
   
   
