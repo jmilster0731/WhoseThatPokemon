@@ -5,15 +5,15 @@ const alphabet = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D
 const pokemon = ['BULBASAUR', 'IVYSAUR', 'VENUSAUR', 'CHARMANDER', 'CHARMELEON', 'CHARIZARD', 'SQUIRTLE', 'WARTORTLE', 'BLASTOISE'];
 
 const pokemonHint = [
-  'https://i.imgur.com/pd0rjsv.png',
-  'https://i.imgur.com/iaeJ14q.png',
-  'https://i.imgur.com/Ekx07nI.png',
-  'https://i.imgur.com/Ve9aIc3.png',
-  'https://i.imgur.com/K9CNpUU.png',
-  'https://i.imgur.com/batsiLI.png',
-  'https://i.imgur.com/lYBJieI.png',
-  'https://i.imgur.com/Iyc0xpa.png',
-  'https://i.imgur.com/YfOp4IZ.png'
+  'https://i.imgur.com/rFSj6lG.png',
+  'https://i.imgur.com/79Ff3y7.png',
+  'https://i.imgur.com/kDSaczG.png',
+  'https://i.imgur.com/TylDFMe.png',
+  'https://i.imgur.com/Z40vcQ9.png',
+  'https://i.imgur.com/UWRXxeS.png',
+  'https://i.imgur.com/Lf117wo.png',
+  'https://i.imgur.com/DbG8nmb.png',
+  'https://i.imgur.com/vITEpwm.png'
 ];
 
 let answerKey = [];
@@ -86,6 +86,7 @@ function userInput(letter) {
   inputBoardRender();
   renderStrikeInfo();
   previousInputRender();
+  winLossRender();
 }
 
 //Function for creating the EMPTY player board for render, will update with a count based on how long the actual array is.
@@ -111,26 +112,7 @@ function gameStart() {
   renderStrikeInfo();
   clearPreviousInput();
   inputBoardRender();
-}
-
-// Win Condition Check
-
-function winConCheck() {
-  if (gameBoard === answerKey) {
-    return true;
-  } else {
-    return false;
-  }
-}
-
-// Loss Condition Check
-
-function lossConCheck() {
-  if (strikeNumber < 3) {
-    return false;
-  } else {
-    return true;
-  }
+  clearWinLossRender();
 }
 
 // input board render
@@ -189,3 +171,25 @@ function clearPreviousInput() {
   previousInput.innerHTML = ''
 }
 
+// WIN/LOSS Conditions render
+function winLossRender() {
+  let gameWinRender = document.querySelector('.win-loss-alert');
+
+  letArrStr1 = gameBoard.join('');
+  letArrStr2 = answerKey.join('');
+
+  if (letArrStr1 === letArrStr2) {
+    gameWinRender.style.display = "block";
+    gameWinRender.innerText = `You've got it! The pokemon was ${letArrStr2}, good job! If you'd like to play again, click on Pikachu!`
+  } else if (strikeNumber > 3) {
+    gameWinRender.style.display = "block";
+    gameWinRender.innerText = `Unfortunately, the pokemon was ${letArrStr2}, you've reached too many strikes to continue! Click Pikachu to try again though!`
+  }
+}
+
+// clear Win/Loss Condition Render for game restart
+
+function clearWinLossRender() {
+  let gameWinRender = document.querySelector('.win-loss-alert');
+  gameWinRender.style.display = "none";
+}
