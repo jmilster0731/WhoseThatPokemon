@@ -11,7 +11,7 @@ This is my first Project for General Assembly, to create a game with clearly def
 - JavaScript
 
 ## Take a look at the current Product!
-PLACEHOLDER FOR LINK TO PROJECT
+Take a look! : https://jmilster0731.github.io/WhoseThatPokemon/
 
 ## Next Steps / Icebox Items
 - Change Hints to refer to a blacked out version of the pokemon instead to increase challenge level, use the currently available picture bank as part of the win declaration instead.
